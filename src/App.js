@@ -18,7 +18,7 @@ function App() {
  
 	useEffect(() => {
 		const hash = getTokenFromUrl();
-		window.location.hash = "";
+		// window.location.hash = "";
 
 		const _token = hash.access_token;
 
@@ -36,6 +36,13 @@ function App() {
 				dispatch({
 					type: "SET_USER",
 					user: user,
+				});
+			});
+
+			spotify.getUserPlaylists().then((playlists) =>{
+				dispatch({
+					type: "SET_PLAYLISTS",
+					playlists: playlists,
 				});
 			});
 		}
