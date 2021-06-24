@@ -42,3 +42,25 @@
     align-items: center;
     color: white;
 }
+
+.footer_green{
+    color: #1ed15e;
+}
+
+.footer_songInfo > h4{
+    margin-bottom: 5px
+}
+
+.footer_songInfo > p{
+    font-size: 12px;
+}
+
+.footer_icon :hover,
+.footer_green :hover{
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.2) !important
+}
+
+.footer_right * .MuiSlider-root{
+    color: #1ed15e;
+}

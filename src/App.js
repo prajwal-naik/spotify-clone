@@ -18,7 +18,7 @@ function App() {
  
 	useEffect(() => {
 		const hash = getTokenFromUrl();
-		// window.location.hash = "";
+		window.location.hash = "";
 
 		const _token = hash.access_token;
 
@@ -45,6 +45,14 @@ function App() {
 					playlists: playlists,
 				});
 			});
+
+			spotify.getPlaylist("37i9dQZEVXcSEWVtCkBJqw")
+				.then(response => {
+					dispatch({
+						type: "SET_DISCOVER_WEEKLY",
+						discover_weekly: response,
+					});
+				});
 		}
 
 	}, []);
